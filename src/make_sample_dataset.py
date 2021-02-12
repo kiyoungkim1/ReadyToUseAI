@@ -11,3 +11,4 @@ def simple(dataset_path='dataset.txt'):
     ]
 
     save_dataset(corpus, dataset_path)
+    return corpus
