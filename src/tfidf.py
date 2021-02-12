@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 
-def apply(dataset_path='dataset.txt', save_path='count.xlsx'):
+def apply(dataset_path='dataset.txt', save_path='tfidf.xlsx'):
     # read dataset
     with open(dataset_path, 'r') as f:
       corpus = [line.replace('\n','').strip() for line in f.readlines()]
