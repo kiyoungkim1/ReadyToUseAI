@@ -26,9 +26,12 @@ def nsmc(mode='test', text_only=False):
   res = requests.get('https://raw.githubusercontent.com/e9t/nsmc/master/ratings_{}.txt'.format(mode))
   df = pd.read_csv(StringIO(res.text), sep='\t')
 
+  df.rename(columns={'document': 'content'}, inplace=True)
+  df = df[['content', 'label']]
+
   if text_only:
     with open('dataset.txt', 'w') as f:
-      for text in list(df['document']):
+      for text in list(df['content']):
         f.write(str(text) + '\n')
   else:
     df.to_excel('dataset.xlsx')
