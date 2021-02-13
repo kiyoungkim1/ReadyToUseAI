@@ -1,3 +1,7 @@
+import requests
+from io import StringIO
+import pandas as pd
+
 def save_dataset(corpus, dataset_path):
     with open(dataset_path, 'w') as f:
       for line in corpus:
@@ -12,3 +16,19 @@ def simple(dataset_path='dataset.txt'):
 
     save_dataset(corpus, dataset_path)
     return corpus
+
+
+def nsmc(mode='test', text_only=False):
+  """
+    mode: ['train' or 'test'] Dataset type
+    text_only: [bool]
+  """
+  res = requests.get('https://raw.githubusercontent.com/e9t/nsmc/master/ratings_{}.txt'.format(mode))
+  df = pd.read_csv(StringIO(res.text), sep='\t')
+
+  if text_only:
+    with open('dataset.txt', 'w') as f:
+      for text in list(df['document']):
+        f.write(str(text) + '\n')
+  else:
+    df.to_excel('dataset.xlsx')
