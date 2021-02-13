@@ -4,7 +4,7 @@
 ## Notebooks
 |    |  설명  | Colab  |
 | ---| ------| ----- |
-| Count_and_tfidf            |   텍스트 파일을 넣고 count 또는 tfidf를 수행합니다.     |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/count_and_tfidf.ipynb#scrollTo=pEPi_qnDK577) |
+| Count_and_tfidf            |   텍스트 파일을 넣고 count 또는 tfidf를 수행합니다.     |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/count_and_tfidf.ipynb) |
 
 # Reference
 [LMkor](https://github.com/kiyoungkim1/LMkor)
