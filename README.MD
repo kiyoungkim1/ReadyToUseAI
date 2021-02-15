@@ -3,14 +3,11 @@
 * 코드에 첨부된 샘플 데이터셋으로 코드에 익숙해진 후, 자체 데이터를 넣어 직접 모델을 만드시면 됩니다.
 
 ## Notebooks
-|    |  설명  | Colab  |
-| ---| ------| ----- |
-| count_and_tfidf                  |   텍스트 파일을 넣고 count 또는 tfidf를 수행합니다.           |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/count_and_tfidf.ipynb) |
-| word2vec_and_fasttext            |   텍스트 파일을 넣고 word2vec 또는 fasttext를 수행합니다.     |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/word2vec_and_fasttext.ipynb) |
-| bert_sequence_classification     |   엑셀파일을 넣으면 BERT로 문장분류 fine-tuning을 수행합니다.  |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseAI/blob/main/notebooks/nlp/bert_sequence_classification.ipynb) |
-
-
-
+| TASK    |  설명  |  Colab | Train | Inference |
+| --------| ------| ------ | ----- | --------- |
+| count_and_tfidf               | txt파일로 부터 count 또는 tfidf                 |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/count_and_tfidf.ipynb) | ✅ | ✅ |
+| word2vec_and_fasttext         | txt파일로 부터 word2vec 또는 fasttext           |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/word2vec_and_fasttext.ipynb) | ✅ | ✅ |
+| bert_sequence_classification  | xlsx(excel)파일로 부터 문장분류 BERT fine-tuning |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseAI/blob/main/notebooks/nlp/bert_sequence_classification.ipynb) | ✅ | ✅ |
 
 
 # Reference
