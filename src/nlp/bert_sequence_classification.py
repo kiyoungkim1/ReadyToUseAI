@@ -1,3 +1,7 @@
+"""
+This is somewhat old version code. Work well but will be revisited.
+"""
+
 import os
 import numpy as np
 import pandas as pd
@@ -17,18 +21,15 @@ from transformers import AdamW, get_linear_schedule_with_warmup
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 
-# 정확도 계산 함수
 def flat_accuracy(preds, labels):
     pred_flat = np.argmax(preds, axis=1).flatten()
     labels_flat = labels.flatten()
     return np.sum(pred_flat == labels_flat) / len(labels_flat)
 
 
-# 시간 표시 함수
 def format_time(elapsed):
     elapsed_rounded = int(round((elapsed)))  # 반올림
     return str(timedelta(seconds=elapsed_rounded))  # hh:mm:ss으로 형태 변경
-
 
 class Classification:
     def __init__(self, model_name='kykim/bert-kor-base', model_dir='model', min_sentence_length=1,
@@ -122,8 +123,6 @@ class Classification:
             validation_labels = torch.tensor(validation_labels)
             validation_masks = torch.tensor(validation_masks)
 
-            # 파이토치의 DataLoader로 입력, 마스크, 라벨을 묶어 데이터 설정
-            # 학습시 배치 사이즈 만큼 데이터를 가져옴
             train_data = TensorDataset(train_inputs, train_masks, train_labels)
             train_sampler = RandomSampler(train_data)
             self.train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=self.batch_size)
