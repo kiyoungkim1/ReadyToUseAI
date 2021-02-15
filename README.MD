@@ -5,9 +5,10 @@
 ## Notebooks
 | TASK    |  설명  |  Colab | Train | Inference |
 | --------| ------| :----: | :---: | :-------: |
-| count_and_tfidf               | txt파일로 부터 count 또는 tfidf                 |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/count_and_tfidf.ipynb) | ✅ | ✅ |
-| word2vec_and_fasttext         | txt파일로 부터 word2vec 또는 fasttext           |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/word2vec_and_fasttext.ipynb) | ✅ | ✅ |
-| bert_sequence_classification  | xlsx(excel)파일로 부터 문장분류 BERT fine-tuning |         [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseAI/blob/main/notebooks/nlp/bert_sequence_classification.ipynb) | ✅ | ✅ |
+| count_and_tfidf               | txt파일로 부터 count 또는 tfidf                 |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/count_and_tfidf.ipynb) | ✅ | ✅ |
+| word2vec_and_fasttext         | txt파일로 부터 word2vec 또는 fasttext           |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseNlp/blob/main/notebooks/nlp/word2vec_and_fasttext.ipynb) | ✅ | ✅ |
+| bert_sequence_classification  | xlsx(excel)파일로 부터 문장분류 BERT fine-tuning |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseAI/blob/main/notebooks/nlp/bert_sequence_classification.ipynb) | ✅ | ✅ |
+| summarization_with_bertshared | text를 입력하면 seq2seq 모델로 요약              |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kiyoungkim1/ReadyToUseAI/blob/main/notebooks/nlp/summarization_with_bertshared.ipynb) | - | ✅ |
 
 
 # Reference
