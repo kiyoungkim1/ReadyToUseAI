@@ -18,12 +18,12 @@ def apply(dataset_path='dataset.txt', save_path='tfidf.xlsx'):
 
     # save
     columns = [word[0] for word in sorted(vect.vocabulary_.items(), key=lambda x: x[1])]
-    df = pd.DataFrame(vec_array, columns=columns)
+    df = pd.DataFrame(vec_array, index=corpus, columns=columns)
 
     total = df.sum().to_frame(name='total').T
     df = pd.concat([total, df])
 
-    df.sort_values(by=['total'], ascending=False, axis=1)
+    df.sort_values(by=['total'], ascending=False, axis=1, inplace=True)
     
     if save_path:
         df.to_excel(save_path)
