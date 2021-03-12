@@ -1,7 +1,8 @@
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
+import numpy as np
 
-def apply(dataset_path='dataset.txt', save_path='count.xlsx'):
+def apply(dataset_path='dataset.txt', save_path=None):
     # read dataset
     with open(dataset_path, 'r') as f:
       corpus = [line.replace('\n','').strip() for line in f.readlines()]
@@ -17,14 +18,43 @@ def apply(dataset_path='dataset.txt', save_path='count.xlsx'):
 
     # save
     columns = [word[0] for word in sorted(vect.vocabulary_.items(), key=lambda x: x[1])]
-    df = pd.DataFrame(vec_array, columns=columns)
+    df = pd.DataFrame(vec_array, index=corpus, columns=columns)
 
     total = df.sum().to_frame(name='total').T
     df = pd.concat([total, df])
 
+    df.sort_values(by=['total'], ascending=False, axis=1, inplace=True)
 
-    df.sort_values(by=['total'], ascending=False, axis=1)
-    df.to_excel(save_path)
-    print('Result is saved at {}'.format(save_path))
+    if save_path:
+        df.to_excel(save_path)
+        print('Result is saved at {}'.format(save_path))
+
+    return df, vect
+
+
+def cosine_similarity(a, b):
+    sim =  np.dot(a, b) / (np.linalg.norm(a) * (np.linalg.norm(b)))
+    return sim[0]
+
+def find_similar_sentence(text, dataset_path='dataset.txt', save_path='count_similarity.xlsx'):
+    df, vect = apply(dataset_path='dataset.txt', save_path=None) ### count.apply
+    
+    # get cosine similarity
+    text_tokenized = vect.transform([text]).toarray()
+    df['similarity'] = df.index.map(lambda x: cosine_similarity(text_tokenized, df.loc[x, :].values))
+    
+    # similarity column as first column
+    col = list(df.columns)
+    value = col.pop()
+    col.insert(0, value)
+
+    df = df[col]
+
+    # sort by similarity
+    df.sort_values(by=['similarity'], ascending=False, axis=0, inplace=True)
+
+    if save_path:
+        df.to_excel(save_path)
+        print('Result is saved at {}'.format(save_path))
 
     return df
