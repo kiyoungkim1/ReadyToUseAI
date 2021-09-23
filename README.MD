@@ -1,6 +1,7 @@
 # Ready-To-Use AI
 * 자연어 처리에 익숙하지 않지만 해당 기능을 사용하고 싶은 분들을 위해 텍스트 파일을 넣으면 나머지 과정을 처리해주도록 하였습니다.
 * 코드에 첨부된 샘플 데이터셋으로 코드에 익숙해진 후, 자체 데이터를 넣어 직접 모델을 만드시면 됩니다.
+* 자연어처리를 처음 접하시는 분들을 위해 [Youtube에 자연어처리 기초 강의](https://www.youtube.com/watch?v=Z201jwWo-xs&list=PLrLEKGJAgXxL-R9IqDH7HANWXRsS900tF&ab_channel=Ready-To-UseTech)를 올려두었습니다(약 6시간 분량)
 
 ## Notebooks
 | TASK    |  설명  |  Colab | Train | Inference |
